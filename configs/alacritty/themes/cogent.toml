@@ -1,0 +1,29 @@
+# Colors (Cogent)
+# Source Cogent
+
+# Default colors
+[colors.primary]
+background = '#2A0F31'
+foreground = '#C2B8C5'
+
+# Normal colors
+[colors.normal]
+black   = '#073642'
+red     = '#AE445A'
+green   = '#256642'
+yellow  = '#F39F5A'
+blue    = '#5AAEF3'
+magenta = '#A74C7F'
+cyan    = '#44AE98'
+white   = '#DAD5DC'
+
+# Bright colors
+[colors.bright]
+black   = '#4c4c4c'
+red     = '#AE6344'
+green   = '#586e75'
+yellow  = '#657b83'
+blue    = '#839496'
+magenta = '#445AAE'
+cyan    = '#93a1a1'
+white   = '#DAD5DC'
