@@ -6,7 +6,7 @@ sudo pacman -Syu &
 sleep 4
 
 # Install packages for system
-sudo pacman -S yay-git alacritty neovim picom redshift rofi zellij starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit &
+sudo pacman -S yay-git alacritty udiskie neovim picom redshift rofi zellij starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit &
 
 # Wait
 sleep 4
