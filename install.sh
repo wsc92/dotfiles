@@ -1,6 +1,6 @@
 #!bin/bash
 sudo pacman -Syu &
-sudo pacman -S alacritty neovim picom redshift rofi zellij starship npm ripgrep ranger &
+sudo pacman -S yay-git alacritty neovim picom redshift rofi zellij starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit &
 rm ~/.bashrc &
 cp bashrc ~/.bashrc &
 rm -rf ~/.config/alacritty/ &
