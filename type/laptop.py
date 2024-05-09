@@ -124,9 +124,9 @@ def init_widgets_list():
             widget.TextBox(
                 background=cogent['inactive'],
                 foreground=cogent['yellow'],
-                text="",
+                text=" ",
                 fontsize=20,
-                padding=7,
+                padding=9,
                 mouse_callbacks={"Button1": lazy.spawn('ghidra')},
             ),
             widget.TextBox(
