@@ -32,6 +32,7 @@ sleep 4
 
 #make directories and install theme
 source .install/sddm.sh
+source .install/type.sh
 source .install/filemerge.sh
 # source .install/python.sh
 
