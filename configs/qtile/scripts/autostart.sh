@@ -10,3 +10,4 @@ blueman-applet &
 pasystray &
 redshift -c ~/.config/redshift/redshift.conf &
 flameshot &
+morgen &

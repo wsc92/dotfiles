@@ -127,7 +127,7 @@ def init_widgets_list():
                 text="",
                 fontsize=20,
                 padding=7,
-                mouse_callbacks={"Button1": lazy.spawn('android-studio')},
+                mouse_callbacks={"Button1": lazy.spawn('ghidra')},
             ),
             widget.TextBox(
                 background=cogent['inactive'],
