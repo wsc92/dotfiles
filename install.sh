@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install System
 #
-
+source .install/pac.sh
 #sleep
 sleep 2
 
@@ -16,13 +16,15 @@ sleep 2
 sudo pacman -S base-devel sddm alacritty unzip qtile pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang gcc gdb eza udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit obsidian nerd-fonts -y
 sleep 4
 
-yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark qtile-extras-git cava
+yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark qtile-extras-git
 sleep 4
 
 #enable sddm
 sudo systemctl enable sddm &
 sleep 4
 
+sudo pacman -Syu -y
+sudo pacman -S cava -y
 
 #make directories and install theme
 source .install/sddm.sh
