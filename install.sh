@@ -19,7 +19,7 @@ sleep 4
 sudo pacman -S base-devel sddm alacritty kitty unzip nmap qtile pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang gcc gdb eza udiskie github-cli btop neovim picom redshift rofi zellij rofi ruby starship npm ripgrep fzf feh ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit pasystray obsidian nerd-fonts -y
 sleep 4
 
-yay -S archlinux-tweak-tool-git wget morgen burpsuite drawio-desktop sddm-sugar-dark qtile-extras-git
+yay -S archlinux-tweak-tool-git wget morgen burpsuite sddm-sugar-dark qtile-extras-git
 sleep 4
 
 #enable sddm
