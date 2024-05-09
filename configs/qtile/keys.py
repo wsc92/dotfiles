@@ -55,6 +55,7 @@ keys = [
     Key([mod], "p", lazy.spawn("alacritty -e 'btop'"), desc="Launch Processes"),
     Key([mod], "g", lazy.spawn("flameshot gui"), desc="Screen Grab"),
     Key([mod], "n", lazy.spawn("obsidian"), desc="Launch Notes"),
+    Key([mod], "k", lazy.spawn("kitty"), desc="Launch Kitty"),
     Key([mod], "s", lazy.spawn("tradingview"), desc="Launch TradingView"),
     Key([mod], "c", lazy.spawn("firefox --new-window https://chat.openai.com"), desc="Launch ChatGPT"),
     Key([mod], "Tab", lazy.spawn("rofi -show window -show-icons"), desc="Launch Windows"),

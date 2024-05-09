@@ -16,7 +16,7 @@ sudo pacman -Syu
 sleep 4
 
 #install packages
-sudo pacman -S base-devel sddm alacritty unzip nmap qtile pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang gcc gdb eza udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep fzf ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit pasystray obsidian nerd-fonts -y
+sudo pacman -S base-devel sddm alacritty kitty unzip nmap qtile pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang gcc gdb eza udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep fzf ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit pasystray obsidian nerd-fonts -y
 sleep 4
 
 yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark qtile-extras-git
