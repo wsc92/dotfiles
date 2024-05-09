@@ -16,7 +16,7 @@ source .install/updatesystem.sh
 sleep 2
 
 #install packages
-sudo pacman -S base-devel sddm alacritty qtile qtile-extras-git pyright nwg-look lua-language-server pavucontrol blueman clang udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit cava obsidian nerd-fonts -y
+sudo pacman -S base-devel sddm alacritty unzip qtile qtile-extras-git pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit cava obsidian nerd-fonts -y
 sleep 4
 
 yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark
