@@ -1,5 +1,7 @@
 #!/bin/bash
 # remove defaults and replace config files
+cp -r ~/dotfiles/wallpapers ~
+
 rm ~/.bashrc &
 cp ~/dotfiles/bashrc ~/.bashrc &
 

@@ -2,7 +2,7 @@
 
 #wallpapaer
 xrandr -s 1920x1080 &
-nitrogen --restore &
+nitrogen ~/wallpapers/ &
 /usr/bin/lxqt-policykit-agent &
 nm-applet &
 picom &
