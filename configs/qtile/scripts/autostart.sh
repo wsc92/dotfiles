@@ -2,7 +2,7 @@
 
 #wallpapaer
 xrandr -s 1920x1080 &
-nitrogen ~/wallpapers/ &
+feh --bg-scale --randomize ~/wallpapers/* &
 /usr/bin/lxqt-policykit-agent &
 nm-applet &
 picom &
