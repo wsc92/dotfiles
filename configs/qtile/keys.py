@@ -13,6 +13,7 @@ browser = "firefox"
 menu = "rofi -show drun -show-icons"
 editor = "~/.config/qtile/scripts/editor.sh"
 home = os.path.expanduser("~")
+wallpaper = os.path.expanduser("~/.config/qtile/scripts/wallpaper.sh")
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -51,7 +52,7 @@ keys = [
     Key([mod], "t", lazy.spawn("alacritty -e 'nvim'"), desc="Launch Neovim"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch Browser"),
     Key([mod], "r", lazy.spawn(menu), desc="Launch rofi"),
-    Key([mod], "w", lazy.spawn("morgen"), desc="Launch Calendar"),
+    Key([mod], "w", lazy.spawn(wallpaper), desc="Change wallpaper"),
     Key([mod], "p", lazy.spawn("alacritty -e 'btop'"), desc="Launch Processes"),
     Key([mod], "g", lazy.spawn("flameshot gui"), desc="Screen Grab"),
     Key([mod], "n", lazy.spawn("obsidian"), desc="Launch Notes"),
