@@ -1,9 +1,6 @@
 #!/bin/bash
 # Install System
-
-# Change pacman.config
-sudo rm /etc/pacman.conf &
-sudo cp pacman.conf /etc/ &
+#
 
 #sleep
 sleep 2
@@ -16,46 +13,22 @@ source .install/updatesystem.sh
 sleep 2
 
 #install packages
-sudo pacman -S base-devel sddm alacritty unzip qtile qtile-extras-git pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit cava obsidian nerd-fonts -y
+sudo pacman -S base-devel sddm alacritty unzip qtile pyright nwg-look lua-language-server pavucontrol blueman wireshark-qt clang gcc gdb eza udiskie github-cli btop neovim picom redshift rofi zellij rofi starship npm ripgrep ranger discord firefox nitrogen nemo flameshot xorg-xrandr lxqt-policykit obsidian nerd-fonts -y
 sleep 4
 
-yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark
+yay -S archlinux-tweak-tool-git morgen burpsuite drawio sddm-sugar-dark qtile-extras-git cava
 sleep 4
 
 #enable sddm
 sudo systemctl enable sddm &
 sleep 4
 
+
 #make directories and install theme
-sudo cp default.conf /etc/sddm.conf.d/
+source .install/sddm.sh
+source .install/filemerge.sh
 
-# remove defaults and replace config files
-rm ~/.bashrc &
-cp bashrc ~/.bashrc &
-
-rm -rf ~/.config/alacritty/ &
-cp -r configs/alacritty/ ~/.config &
-
-rm -rf ~/.config/nvim/ &
-cp -r configs/nvim/ ~/config &
-
-rm -rf ~/.config/picom/ &
-cp -r configs/picom/ ~/.config &
-
-rm -rf ~/.config/redshift/ &
-cp -r configs/redshift/ ~/.config &
-
-rm -rf ~/.config/rofi/ &
-cp -r configs/rofi/ ~/.config &
-
-rm -rf ~/.config/zellij/ &
-cp -r configs/zellij/ ~/.config &
-
-rm -rf ~/.config/starship.toml &
-cp configs/starship.toml ~/.config &
-
-rm -rf ~/.config/qtile/ &
-cp -r configs/qtile ~/.config &
+sleep 4
 
 source .install/reboot.sh
 
