@@ -1,10 +1,10 @@
 if test -e ~/.bashrc; then
     echo "bashrc exists... replacing!"
     rm ~/.bashrc
-    cp ~/dotfiles/bashrc ~ 
+    cp ~/dotfiles/bashrc ~/.bashrc 
 else
     echo "bashrc does not exist... creating!"
-    cp ~/dotfiles/bashrc ~ 
+    cp ~/dotfiles/bashrc ~/.bashrc
 fi
 if test -d ~/.config/alacritty; then
     echo "alacritty exists... replacing!"

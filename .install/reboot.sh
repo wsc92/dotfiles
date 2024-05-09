@@ -1,7 +1,15 @@
-echo "Installation Finished reboot? "\
-select yn in "Y" "n"; do
-    case $yn in
-        Y ) reboot; break;;
-        n ) exit;;
-    esac
+#!/bin/sh
+
+while true; do
+
+read -p "Installation Finished reboot? (y/n) " yn
+
+case $yn in
+ 	[yY] ) echo rebooting...;
+		reboot;;
+        [nN] ) echo exiting...;
+	      	exit;;
+	* ) echo invalid response;;
+esac
+
 done
