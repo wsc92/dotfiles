@@ -6,7 +6,7 @@ import = ["~/.config/alacritty/themes/catppuccin_frappe.toml"]
 
 [shell]
 args = ["-l", "-c", "zellij attach --index 0 || zellij"]
-program = "/usr/bin/bash"
+program = "/usr/bin/fish"
 
 [window]
 opacity = 0.4
