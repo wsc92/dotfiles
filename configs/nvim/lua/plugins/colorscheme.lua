@@ -1,5 +1,5 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin-latte", priority = 1000 },
+  { "catppuccin/nvim", name = "catppuccin-frappe", priority = 1000 },
   -- {
   --   "AlexvZyl/nordic.nvim",
   --   lazy = false,

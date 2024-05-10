@@ -1,3 +1,12 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
+-- Sets colors to line numbers Above, Current and Below in this orders
+function LineNumberColors()
+  vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#C6D0F8", bold = true })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#E78284", bold = true })
+  vim.api.nvim_set_hl(0, "LineNr", { fg = "#E78284", bold = true })
+  vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#C6D0F8", bold = true })
+end
+
+LineNumberColors()
