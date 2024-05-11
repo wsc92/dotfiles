@@ -27,7 +27,6 @@ $python\
 $rust\
 \n\
 \n$character\
-\n
 """
 right_format = """
 $cmd_duration\
