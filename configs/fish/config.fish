@@ -22,6 +22,7 @@ alias la "eza -la -g --icons"
 alias ll "ls -l"
 alias lla "tree -a"
 alias g git
+alias r ranger
 command -qv nvim && alias vim nvim && alias v nvim
 
 set -gx EDITOR nvim
