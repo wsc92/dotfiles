@@ -2,7 +2,7 @@ import os
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule, ScratchPad, DropDown
 from libqtile.command import lazy
 
-import subprocess
+from floating_window_snapping import move_snap_window
 
 from groups import groups
 
@@ -109,7 +109,7 @@ for i in groups:
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button1", move_snap_window(snap_dist=20), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
