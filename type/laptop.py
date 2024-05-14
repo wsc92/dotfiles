@@ -6,7 +6,7 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 from libqtile.config import Click
 
 from defaults import browser
-from colorschemes import cogent
+from colorschemes import cogent, cogentN
 from libqtile.command import lazy
 
 home = os.path.expanduser("~")
@@ -62,15 +62,15 @@ def init_widgets_list():
             widget.Spacer(
                 **decor_right2,
                 length=10,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.TextBox(
                 **decor_left2,
-                background=cogent['inactive'],
+                background=cogentN['bga'],
                 text='APPS',
                 font="Mononoki Nerd Font",
                 fontsize=20,
-                foreground=cogent['green'],
+                foreground=cogentN['yellow'],
                 padding=10,
                 mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")},
                 center_aligned=True,
@@ -78,85 +78,85 @@ def init_widgets_list():
             widget.Spacer(
                 **decor_right2,
                 length=25,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.GroupBox(
                 **decor_left2,
                 fontsize=15,
-                background=cogent['inactive'],
+                background=cogentN['bga'],
                 highlight_method='block',
-                highlight=cogent['active'],
-                block_border=cogent['inactive'],
-                block_highlight_text_color=cogent['inactive'],
-                foreground=cogent['active'],
+                highlight=cogentN['active'],
+                block_border=cogentN['active'],
+                block_highlight_text_color=cogentN['inactive'],
+                foreground=cogentN['active'],
                 rounded=True,
-                this_current_screen_border=cogent['active'],
-                active=cogent['green'],
-                inactive=cogent['active'],
+                this_current_screen_border=cogentN['active'],
+                active=cogentN['active'],
+                inactive=cogentN['inactive'],
                 padding=10,
                 center_aligned=True,
             ),
             widget.Spacer(
                 **decor_left2,
                 length=5,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.Visualiser(
                 bars = 18,
                 framerate = 30,
                 hide = False,
                 width = 120,
-                bar_colour = cogent['fg'],
+                bar_colour = cogentN['fg'],
             ),
             widget.Spacer(
                 **decor_right2,
                 length=10,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.TextBox(
-                background=cogent['inactive'],
-                foreground=cogent['red'],
+                background=cogentN['bga'],
+                foreground=cogentN['red'],
                 text="󰽉",
                 fontsize=20,
                 padding=5,
                 mouse_callbacks={"Button1": lazy.spawn('draw.io')},
             ),
             widget.TextBox(
-                background=cogent['inactive'],
-                foreground=cogent['yellow'],
+                background=cogentN['bga'],
+                foreground=cogentN['orange'],
                 text=" ",
                 fontsize=20,
-                padding=9,
+                padding=7,
                 mouse_callbacks={"Button1": lazy.spawn('ghidra')},
             ),
             widget.TextBox(
-                background=cogent['inactive'],
-                foreground=cogent['rose'],
+                background=cogentN['bga'],
+                foreground=cogentN['yellow'],
                 text=" ",
                 fontsize=20,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("wireshark")},
             ),          
             widget.TextBox(
-                background=cogent['inactive'],
-                foreground=cogent['green'],
-                text="󰚫 ",
+                background=cogentN['bga'],
+                foreground=cogentN['green'],
+                text="󰚫",
                 fontsize=20,
-                padding=3,
+                padding=9,
                 mouse_callbacks={"Button1": lazy.spawn("zenmap")},
             ),          
             widget.TextBox(
-                background=cogent['inactive'],
-                foreground=cogent['blue'],
+                background=cogentN['bga'],
+                foreground=cogentN['blue'],
                 text=" ",
                 fontsize=20,
-                padding=3,
+                padding=4,
                 mouse_callbacks={"Button1": lazy.spawn('discord')},
             ),
             widget.TextBox(
                 **decor_left2,
-                background=cogent['inactive'],
-                foreground=cogent['active'],
+                background=cogentN['bga'],
+                foreground=cogentN['magenta'],
                 text="󰸉",
                 fontsize=20,
                 padding=3,
@@ -164,46 +164,44 @@ def init_widgets_list():
             ),
             widget.Spacer(
                 length=5,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
 
             widget.WindowName(
-                background=cogent['bg'],
+                background=cogentN['bg'],
                 padding=10,
                 font="Mononoki Nerd Font Bold",
                 fontsize=18,
-                foreground=cogent['fg'],
+                foreground=cogentN['fg'],
                 max_chars=50,
             ),
 
             widget.Spacer(
                 **decor_right2,
                 length=5,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.OpenWeather(
                 **decor_left2,
-                # api_key="", Enter your own API KEY
-                # cityid="", Enter your own city id
-                location= "newyork,USA", #remove this after you set api and city
+                api_key="c0916b9e5651102140d56565e529d146",
+                cityid="4612862",
                 metric= False,
                 format = '{location_city}: {main_temp} °{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
                 fontsize=20,
-                foreground=cogent['yellow'],
-                background=cogent['inactive'],
+                foreground=cogentN['yellow'],
+                background=cogentN['bga'],
                 mouse_callbacks={"Button1": lazy.spawn('firefox --new-window https://weather.com')},
             ),
             widget.Spacer(
                 length=5,
-                background=cogent['bg'],
+                background=cogentN['bg'],
             ),
             widget.Systray(
-                background=cogent['bg'],
-                ),
+                background=cogentN['bg'],
+            ),
             widget.BatteryIcon(
                 scale = 1.7,
-
             ),
             widget.Battery(
                 format = "{percent:2.0%}",
@@ -211,15 +209,15 @@ def init_widgets_list():
             widget.Sep(
                 **decor_right,
                 linewidth=5,
-                background=cogent['bg'],
-                foreground=cogent['inactive'],
+                background=cogentN['bg'],
+                foreground=cogentN['bga'],
                 size_percent=75,
             ),
             widget.Clock(
                 **decor_right,
                 format="%m/%d/%Y",
-                background=cogent['bg'],
-                foreground=cogent['blue'],
+                background=cogentN['bg'],
+                foreground=cogentN['blue'],
                 fontsize=14,
                 font="Mononoki Nerd Font",
                 padding=1,
@@ -228,8 +226,8 @@ def init_widgets_list():
             widget.Clock(
                 **decor_right,
                 format="%I:%M %p",
-                background=cogent['bg'],
-                foreground=cogent['fg'],
+                background=cogentN['bg'],
+                foreground=cogentN['white'],
                 font="Mononoki Nerd Font",
                 fontsize=18,
                 padding=1,
@@ -237,8 +235,8 @@ def init_widgets_list():
 
             widget.TextBox(
                 **decor_right,
-                backround=cogent['bg'],
-                foreground=cogent['magenta'],
+                backround=cogentN['bg'],
+                foreground=cogentN['red'],
                 padding=2,
                 text="⏻",
                 fontsize=20,
@@ -260,8 +258,8 @@ def init_widgets_screen2():
 
 
 main_bar = bar.Bar(widgets=init_widgets_screen1(), size=45,
-                   opacity=0.80, margin=2, background=cogent['bg'])
+                   opacity=0.80, margin=2, background=cogentN['bg'])
 
 main_bar2 = bar.Bar(widgets=init_widgets_screen2(), size=45,
-                   opacity=0.80, margin=2, background=cogent['bg'])
+                   opacity=0.80, margin=2, background=cogentN['bg'])
 
