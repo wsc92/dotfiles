@@ -105,12 +105,12 @@ def init_widgets_list():
                 bars = 18,
                 framerate = 30,
                 hide = False,
-                width = 150,
+                width = 120,
                 bar_colour = cogent['fg'],
             ),
             widget.Spacer(
                 **decor_right2,
-                length=15,
+                length=10,
                 background=cogent['bg'],
             ),
             widget.TextBox(
@@ -140,10 +140,10 @@ def init_widgets_list():
             widget.TextBox(
                 background=cogent['inactive'],
                 foreground=cogent['green'],
-                text=" ",
+                text="󰚫 ",
                 fontsize=20,
                 padding=3,
-                mouse_callbacks={"Button1": lazy.spawn("tradingview")},
+                mouse_callbacks={"Button1": lazy.spawn("zenmap")},
             ),          
             widget.TextBox(
                 background=cogent['inactive'],
@@ -181,17 +181,18 @@ def init_widgets_list():
                 length=5,
                 background=cogent['bg'],
             ),
-            widget.StockTicker(
+            widget.OpenWeather(
                 **decor_left2,
-                func="TIME_SERIES_DAILY",
-                apikey="ROHY72GSY75UM099",
-                symbol="SPY",
+                # api_key="", Enter your own API KEY
+                # cityid="", Enter your own city id
+                location= "newyork,USA", #remove this after you set api and city
+                metric= False,
+                format = '{location_city}: {main_temp} °{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
                 fontsize=20,
                 foreground=cogent['yellow'],
                 background=cogent['inactive'],
-                interval='1D',
-                mouse_callbacks={"Button1": lazy.spawn("tradingview")}
+                mouse_callbacks={"Button1": lazy.spawn('firefox --new-window https://weather.com')},
             ),
             widget.Spacer(
                 length=5,
