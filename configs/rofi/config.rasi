@@ -2,7 +2,7 @@ configuration {
     modi: "combi,windowcd,run";
     lines: 10;
     columns: 2;
-    font: "sans 13";
+    font: "Mononoki Nerd Font 18";
     bw: 0;
     location: 0;
     padding: 0;
@@ -81,16 +81,17 @@ configuration {
 }
 window {
     background-color: @xbg;
-    border: 0;
-    border-color: @x14;
+    border: 5px;
+    border-color: @x2;
     border-radius: 12px;
     padding: 40;
-    width: 50%;
-    height: 50%;
+    width: 75%;
+    height: 60%;
 }
 mainbox {
-    border: 0;
-    border-color: @x0;
+    border: 3px;
+    border-color: @x2;
+    border-radius: 12px;
     padding: 6;
 }
 message {
@@ -104,13 +105,14 @@ textbox {
 listview {
     fixed-height: 0;
     border: 0px;
-    border-color: @x6;
+    border-color: @x0;
     spacing: 2px;
     scrollbar: false;
     padding: 2px 0px 0px;
 }
 element {
-    border: 0;
+    border: 3px;
+    border-color: @x0;
     padding: 1px;
 }
 element normal.normal {
@@ -127,7 +129,7 @@ element normal.active {
 }
 element selected.normal {
     background-color: rgba (0,0,0,0%);
-    text-color:       @x13;
+    text-color:       @x1;
 }
 element selected.urgent {
     background-color: rgba (0,0,0,0%);
@@ -135,7 +137,7 @@ element selected.urgent {
 }
 element selected.active {
     background-color: rgba (0,0,0,0%);
-    text-color:       @x13;
+    text-color:       @x1;
 }
 element alternate.normal {
     background-color: rgba (0,0,0,0%);
@@ -151,13 +153,13 @@ element alternate.active {
 }
 scrollbar {
     width:        4px ;
-    border:       0;
+    border:       1px;
     handle-color: @xfg;
     handle-width: 8px ;
     padding:      0;
 }
 sidebar {
-    border:       0px;
+    border:      1px;
     border-color: @x4;
     border-radius: 20px;
 }
@@ -165,17 +167,17 @@ button {
     margin: 5px;
     padding: 5px;
     background-color: @xbg;
-    text-color: @x8;
-    border: 0px;
+    text-color: @x1;
+    border: 3px;
     border-radius: 20px;
-    border-color: @x8;
+    border-color: @x2;
 }
 button selected {
     background-color: @xbg;
-    text-color:       @x7;
-    border:       3px;
+    text-color:       @x1;
+    border:       4px;
     border-radius: 20px;
-    border-color:     @x7;
+    border-color:     @x1;
 }
 inputbar {
     spacing:    0px ;
@@ -192,8 +194,8 @@ entry {
     text-color: @xfg;
 }
 prompt {
-    spacing:    0;
-    border:     0;
+    spacing:    0px;
+    border:     0px;
     text-color: @xfg;
 }
 textbox-prompt-colon {

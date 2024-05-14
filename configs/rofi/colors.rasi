@@ -1,11 +1,11 @@
 * {
-    xbg:    #1D1F28;
-    xfg:    #FDFDFD;
-    x0:     #282A36;
-    x1:     #F37F97;
-    x2:     #5ADECD;
+    xbg:    #341C3E;
+    xfg:    #DAD5DC;
+    x0:     #583068;
+    x1:     #F6AA5F;
+    x2:     #B9415A;
     x3:     #F2A272;
-    x4:     #8897F4;
+    x4:     #5FABF6;
     x5:     #C574DD;
     x6:     #79E6F3;
     x7:     #FDFDFD;
@@ -15,6 +15,6 @@
     x11:    #FF8037;
     x12:    #556FFF;
     x13:    #B043D1;
-    x14:    #3FDCEE;
+    x14:    #E36B5D;
     x15:    #FDFDFD;
 }
