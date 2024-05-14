@@ -36,8 +36,8 @@ $hostname\
 
 
 [username]
-style_user = "#E5C890"
-style_root = "#E78284"
+style_user = "#F6AA5F"
+style_root = "#B9415A"
 format = "  [$user]($style) "
 disabled = false
 show_always = true
@@ -45,7 +45,7 @@ show_always = true
 # Set up Host
 [hostname]
 ssh_only = false
-format = '󰇅 [arch-cogent](#E5C890)'
+format = '󰇅 [arch-cogent](#F6AA5F)'
 trim_at = "."
 disabled = false
 
@@ -53,12 +53,12 @@ disabled = false
 [time]
 disabled = false
 time_format = "%R"
-format = "🕐[ $time ](#C6D0F5)"
+format = "🕐[ $time ](#DAD5DC)"
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ 󰁕](#A6D189)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[  ](#E78284)'
+success_symbol = '[ 󰁕](#406830)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[  ](#B9415A)'
 
 
 
@@ -68,7 +68,7 @@ read_only = " 󰌾"
 truncation_length = 5
 truncate_to_repo = true
 truncation_symbol = '.../'
-style = "bold italic #A6D189"
+style = "bold italic #5FABF6"
 home_symbol = " "
 
 # Here is how you can shorten some long paths by text replacement
