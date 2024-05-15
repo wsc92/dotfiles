@@ -25,6 +25,15 @@ else
 	cp -r ~/dotfiles/configs/fish ~/.config
 fi
 
+if test -d ~/.config/kitty; then
+	echo "kitty exists... replacing!"
+	rm -r ~/.config/kitty
+	cp -r ~/dotfiles/configs/kitty ~/.config
+else
+	echo "kitty does not exist... creating"
+	cp -r ~/dotfiles/configs/kitty ~/.config
+fi
+
 if test -d ~/.config/nvim; then
 	echo "nvim exists... replacing!"
 	rm -r ~/.config/nvim
