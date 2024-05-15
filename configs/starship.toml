@@ -57,7 +57,7 @@ format = "🕐[ $time ](#DAD5DC)"
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ 󰁕](#406830)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[ 󰁕](#609C48)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 error_symbol = '[  ](#B9415A)'
 
 

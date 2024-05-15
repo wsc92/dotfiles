@@ -23,7 +23,7 @@ cogentN = {
         'fg'         : '#C2B8C5',
         'black'      : '#073642',
         'red'        : '#B9415A',
-        'green'      : '#406830',
+        'green'      : '#609C48',
         'yellow'     : '#F6AA5F',
         'blue'       : '#5fabf6',
         'magenta'    : '#b94196',
