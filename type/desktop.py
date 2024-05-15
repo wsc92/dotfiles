@@ -92,7 +92,7 @@ def init_widgets_list():
                 rounded=True,
                 this_current_screen_border=cogentN['active'],
                 active=cogentN['active'],
-                inactive=cogentN['inactive'],
+                inactive=cogentN['bg'],
                 padding=10,
                 center_aligned=True,
             ),
