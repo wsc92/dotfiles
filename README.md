@@ -4,7 +4,7 @@
 ### It should be stable, but it requires MONONOKI NERD FONT so pick that option as the initial Nerd Font in the installer 
 ##### It is still a WIP so *ONLY* install if you are know what you are doing in Arch and Qtile
 + Always browse the source in the scripts before installing blindly!! 😄
-### Key Commands (working on the full list)
+### Key Commands (working on the full list will have it built into system)
 + super key by default is the windows key
 + super + q = quit
 + super + w = change wallpaper (add more to wallpapers in home)
@@ -20,3 +20,4 @@
 + super + TAB = all apps that are open menu and workstation number
 + super + [1-6] = change workspace
 + super + shift + [1-6] = move application to that workspace
+
