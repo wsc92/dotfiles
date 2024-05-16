@@ -21,11 +21,23 @@
     + Run the install.sh script
         + ```./install.sh```
 + Read the Prompts and make sure to pick Mononoki Nerd Font as the nerd-font to install
-+ After installation sddm will be installed and when you first login make sure to pick Qtile not Qtile(Wayland)
-+ Not every PC is the same so if a problem arises ill work on a fix
-+ run arch-linux-tweaktool to get your window themes and icons and cursors
-    + after arch-linux-tweak tool updates pacman it will switch the sddm config file
-    + so if you want the sugar-dark theme then delete the added sddm config file in /etc/sddm.conf.d
+    + The script will prompt you to reboot when complete select "y" (you must reboot)
++ After the reboot it will launch into sddm with the sugar-dark theme and when you first login make sure to pick Qtile not Qtile(Wayland)
++ after the window manager is running and you have logged in and its not a blank screen otherwise an error occured
++ run arch-linux-tweaktool to get your GTK themes, file icons, and cursors
+    + key command is: super + r then navigate to the tool
+    + then use the tool to get the keys and repos in pacman
+    + install the themes you want
+    + install the icons you want
+    + install the cursors you want
++ after arch-linux-tweak tool updates pacman and you install your themes on the next reboot it will switch the sddm config file
++ login
++ open a terminal super + enter
++ navigate to the config folder
+    + ```cd /etc/sddm.conf.d```
+    + find the name of kde config file created with ```ls```
+    + and remove the KDE config file with ```rm <nameofcreatedfile>```
++ Now you're done play around and learn qtile its a fun hackable tiling window manager
 ### Packages
 + it does have quite a few packages so it can take a while to install with various user input prompts so read as you run the ./install.sh script
 + Package Managers
