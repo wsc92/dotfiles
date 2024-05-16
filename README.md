@@ -34,7 +34,7 @@
 
 ##### To fix this
 + open a terminal super + enter
-+ navigate to the config folder
++ navigate to the sddm config folder
     + ```cd /etc/sddm.conf.d```
     + ```ls```
     + there should be two files default and one that starts with KDE 
