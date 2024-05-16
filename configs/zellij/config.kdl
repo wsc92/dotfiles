@@ -280,13 +280,13 @@ themes {
         bg "#2A0F31"
         fg "#C2B8C5"
         red "#AE445A"
-        green "#256642"
+        green "#5AAEF3"
         yellow "#F39F5A"
         blue "#5AAEF3"
         magenta "#445AAE"
         orange "#AE6344"
         cyan "#44A398"
-        black "#073642"
+        black "#341C3E"
         white "#DAD5DC"
     }
 }
