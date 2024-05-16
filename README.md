@@ -30,7 +30,7 @@
     + install the themes you want
     + install the icons you want
     + install the cursors you want
-##### after arch-linux-tweak tool updates pacman and you install your themes on the next reboot it will switch the sddm config file
+### after arch-linux-tweak tool updates pacman and you install your themes.... on the next reboot it will switch the sddm config file
 ##### to fix this
 + open a terminal super + enter
 + navigate to the config folder
