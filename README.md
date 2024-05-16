@@ -78,10 +78,10 @@
     + Node
     + and im sure im forgetting some
 
-### Key Commands 
-#### working on the full list will have it built into system soon
-#### in the meantime look for keys.py in the .config/qtile folder)
-#### super key by default is the windows key
+## Key Commands 
++ working on the full list will have it built into system soon
+    + in the meantime look for keys.py in the .config/qtile folder
+### super key by default is the windows key
 + super + q = quit
 + super + w = change wallpaper (add more to wallpapers in home)
 + super + e = File Manager (Nemo)
