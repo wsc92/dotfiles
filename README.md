@@ -1,4 +1,4 @@
-# My Arch Linux Qtile Configuration 
+# An Arch Linux Qtile Configuration w/ installer
 # (USE X11 not WAYLAND)
 ![Alt text](clean.png "clean")
 ![Alt text](app.png "app")
