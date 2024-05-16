@@ -14,9 +14,9 @@
         + text editor of your choice (in case something goes horribly wrong)
         + pacman (should be installed with arch but I like to double check)
 + Clone the repo
-    + ```bash git clone https://github.com/wsc92/dotfiles```
+    + ```git clone https://github.com/wsc92/dotfiles```
 + Run the install.sh script
-    + ```bash ./install.sh```
+    + ```./install.sh```
 + Read the Prompts and make sure to pick Mononoki Nerd Font as the nerd-font to install
 + After installation sddm will be installed and when you first login make sure to pick Qtile not Qtile(Wayland)
 + Not every PC is the same so if a problem arises ill work on a fix
