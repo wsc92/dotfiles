@@ -7,7 +7,7 @@
 + It is still a WIP so *ONLY* install if you know what you are doing in Arch and Qtile
 + Always browse the source in the scripts before installing blindly!! 😄
 
-### Installation
+### Installation (X11 Not Wayland)
 + Clean minimal install of Arch based on your pc specs
     + required packages in the arch install
         + multilib repo if using Nvidia GPU
