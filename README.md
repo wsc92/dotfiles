@@ -18,7 +18,7 @@
 + Login to your fresh new minimal Install
     + Make sure you are connected to the interwebs
         + NetworkManager is enabled (if thats what you went with)
-        + refer to the [arch wiki](https://wiki.archlinux.org/title/Network_configuration) if stuck here
+        + refer to the [arch wiki](https://wiki.archlinux.org/title/Network_configuration) if stuck
     + Clone the repo to your home directory
         + ```git clone https://github.com/wsc92/dotfiles```
     + cd into the cloned directory
