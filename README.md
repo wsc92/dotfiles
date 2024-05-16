@@ -32,6 +32,8 @@
     + install the themes you want
     + install the icons you want
     + install the cursors you want
+#### Remember to set the themes with GTK settings in the menu or in a terminal
++ ```nwg-look```
 ### After arch-linux-tweak tool updates pacman and you install your themes.... on the next reboot it will generate a new sddm config file
 
 ##### To fix this
@@ -42,6 +44,7 @@
     + there should be two files default and one that starts with KDE 
     + remove the one that starts with KDE with ```rm <nameofcreatedfile>```
 ### Now you're done play around and learn qtile its a fun hackable tiling window manager
+### Remember
 
 ### Packages
 + it does have quite a few packages so it can take a while to install with various user input prompts so read as you run the ./install.sh script
