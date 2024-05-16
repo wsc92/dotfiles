@@ -68,6 +68,7 @@
     + Ghidra (disassembler)
     + Zenmap (port scanner)
     + wireshark  (Network monitor)
+    + BurpSuite
     + discord
     + GIMP
     + Blender
