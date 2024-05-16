@@ -1,4 +1,5 @@
 # My Arch Linux Qtile Configuration
-### I wanted to build a installer for my dotfiles
-### It is still a WIP so install if you are know what you are doing in arch
-+ Always Read the scripts before installing blindly!! 😄
+### I wanted to build a installer for my dotfiles'
+### It should be stable, but it requires MONONOKI NERD FONT so pick that option as the initial Nerd Font in the installer 
+##### It is still a WIP so *ONLY* install if you are know what you are doing in Arch and Qtile
++ Always browse the source in the scripts before installing blindly!! 😄
