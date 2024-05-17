@@ -7,6 +7,15 @@ else
 	cp ~/dotfiles/bashrc ~/.bashrc
 fi
 
+if test -e /etc/dunst/dunstrc; then
+	echo "dunst config exists... replacing!"
+	sudo rm /etc/dunst/dunstrc
+	sudo cp ~/dotfiles/dunstrc /etc/dunst
+else
+	echo "dunst config does not exist... creating!"
+	sudo cp ~/dotfiles/dunstrc /etc/dunst
+fi
+
 if test -d ~/.config/alacritty; then
 	echo "alacritty exists... replacing!"
 	rm -r ~/.config/alacritty
