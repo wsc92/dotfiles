@@ -133,16 +133,24 @@ def init_widgets_list():
                 background=cogentN['bga'],
                 foreground=cogentN['yellow'],
                 text=" ",
-                fontsize=20,
+                fontsize=18,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("wireshark")},
-            ),          
+            ),
+            widget.TextBox(
+                background=cogentN['bga'],
+                foreground=cogentN['yellow'],
+                text=" ",
+                fontsize=20,
+                padding=3,
+                mouse_callbacks={"Button1": lazy.spawn("ida64")},
+            ),
             widget.TextBox(
                 background=cogentN['bga'],
                 foreground=cogentN['green'],
-                text="󰚫",
-                fontsize=20,
-                padding=9,
+                text= "󰚫",
+                fontsize=24,
+                padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("zenmap")},
             ),          
             widget.TextBox(
@@ -150,7 +158,7 @@ def init_widgets_list():
                 foreground=cogentN['blue'],
                 text=" ",
                 fontsize=20,
-                padding=4,
+                padding=6,
                 mouse_callbacks={"Button1": lazy.spawn('discord')},
             ),
             widget.TextBox(
@@ -183,8 +191,8 @@ def init_widgets_list():
             ),
             widget.OpenWeather(
                 **decor_left2,
-                api_key="", # enter API Key from OpenWeather
-                cityid="", # enter city id
+                api_key="c0916b9e5651102140d56565e529d146", # enter API Key
+                cityid="4612862", # enter city
                 metric= False,
                 format = '{location_city}: {main_temp} °{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
@@ -199,12 +207,6 @@ def init_widgets_list():
             ),
             widget.Systray(
                 background=cogentN['bg'],
-            ),
-            widget.BatteryIcon(
-                scale = 1.7,
-            ),
-            widget.Battery(
-                format = "{percent:2.0%}",
             ),
             widget.Sep(
                 **decor_right,
