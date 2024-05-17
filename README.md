@@ -47,7 +47,6 @@
     + ```ls```
     + there should be two files default and one that starts with KDE 
     + remove the one that starts with KDE with ```rm <nameofcreatedfile>```
-### Now you're done play around and learn qtile its a fun hackable tiling window manager
 
 ### Packages
 + it does have quite a few packages so it can take a while to install with various user input prompts so read as you run the ./install.sh script
