@@ -132,18 +132,18 @@ def init_widgets_list():
             widget.TextBox(
                 background=cogentN['bga'],
                 foreground=cogentN['yellow'],
-                text=" ",
-                fontsize=18,
-                padding=3,
-                mouse_callbacks={"Button1": lazy.spawn("wireshark")},
-            ),
-            widget.TextBox(
-                background=cogentN['bga'],
-                foreground=cogentN['yellow'],
                 text=" ",
                 fontsize=20,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("ida64")},
+            ),
+            widget.TextBox(
+                background=cogentN['bga'],
+                foreground=cogentN['yellow'],
+                text=" ",
+                fontsize=18,
+                padding=3,
+                mouse_callbacks={"Button1": lazy.spawn("wireshark")},
             ),
             widget.TextBox(
                 background=cogentN['bga'],
