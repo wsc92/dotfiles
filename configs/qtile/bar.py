@@ -7,7 +7,7 @@ from libqtile.config import Click
 
 from defaults import browser
 from colorschemes import cogent, cogentN
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 home = os.path.expanduser("~")
 

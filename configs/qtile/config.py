@@ -13,7 +13,7 @@
 import os
 import subprocess
 from libqtile import hook
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 # My home made imports
 from screens import screens

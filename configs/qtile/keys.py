@@ -1,6 +1,6 @@
 import os
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule, ScratchPad, DropDown
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 from floating_window_snapping import move_snap_window
 
