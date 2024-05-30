@@ -6,4 +6,5 @@ sudo pacman -S base-devel sddm alacritty kitty unzip nmap alsa-utils zoxide qtil
 sleep 4
 
 yay -S archlinux-tweak-tool-git wget morgen burpsuite ida-free zenmap sddm-sugar-dark qtile-extras-git
+yay -S drawio-desktop
 sleep 4
