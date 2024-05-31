@@ -190,8 +190,8 @@ def init_widgets_list():
             ),
             widget.OpenWeather(
                 **decor_left2,
-                api_key="c0916b9e5651102140d56565e529d146", # enter API Key
-                cityid="4612862", # enter city
+                api_key="", # enter API Key
+                cityid="", # enter city
                 metric= False,
                 format = '{location_city}: {main_temp}°{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
