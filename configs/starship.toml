@@ -36,8 +36,10 @@ $hostname\
 
 
 [username]
-style_user = "#F6AA5F"
-style_root = "#B9415A"
+#style_user = "#F6AA5F"
+#style_root = "#B9415A"
+style_user = "#d8a657"
+style_root = "#ea6962"
 format = "  [$user]($style) "
 disabled = false
 show_always = true
@@ -45,7 +47,8 @@ show_always = true
 # Set up Host
 [hostname]
 ssh_only = false
-format = '󰇅 [arch-cogent](#F6AA5F)'
+#format = '󰇅 [arch-cogent](#F6AA5F)'
+format = '󰇅 [arch-cogent](#d8a657)'
 trim_at = "."
 disabled = false
 
@@ -53,13 +56,15 @@ disabled = false
 [time]
 disabled = false
 time_format = "%R"
-format = "🕐[ $time ](#DAD5DC)"
+#format = "🕐[ $time ](#DAD5DC)"
+format = "🕐[ $time ](#d4be98)"
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[ 󰁕](#609C48)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[  ](#B9415A)'
-
+#success_symbol = '[ 󰁕](#609C48)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+#error_symbol = '[  ](#B9415A)'
+success_symbol = '[ 󰁕](#a9b665)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[  ](#ea6962)'
 
 
 # Configure Directory
@@ -68,7 +73,8 @@ read_only = " 󰌾"
 truncation_length = 5
 truncate_to_repo = true
 truncation_symbol = '.../'
-style = "bold italic #5FABF6"
+#style = "bold italic #5FABF6"
+style = "bold italic #7daea3"
 home_symbol = " "
 
 # Here is how you can shorten some long paths by text replacement

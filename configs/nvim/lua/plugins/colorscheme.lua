@@ -1,12 +1,20 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin-frappe", priority = 1000 },
-  -- {
-  --   "AlexvZyl/nordic.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("nordic").load()
-  --   end,
-  -- },
-  -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = true,
+    opts = {
+      overrides = {
+        ["lsp.type.method"] = { fg = "#ff9900" },
+        ["@comment.lua"] = { fg = "#4a4c4d" },
+      },
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
 }
+-- here is a comment

@@ -23,13 +23,22 @@ alias ll "ls -l"
 alias lla "tree -a"
 alias g git
 alias r ranger
+
+# custom commands to build chronos and run
+alias bchronos "/home/cogent/dev/chronos/build.sh"
+alias chronos /home/cogent/dev/chronos/bin/testbed
+
 command -qv nvim && alias vim nvim && alias v nvim
 
+# NVim
 set -gx EDITOR nvim
 
+#PATH
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+
+# C/C++
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
@@ -37,6 +46,12 @@ set -gx PATH node_modules/.bin $PATH
 # Go
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+
+# TODO:: Vulkan
+set -g VULKAN_SDK $HOME/vulkan/1.3.283.0/x86_64
+set -gx PATH $VULKAN_SDK/bin $PATH
+set -g LD_LIBRARY_PATH $VULKAN_SDK/lib $LD_LIBRARY_PATH
+set -g VK_LAYER_PATH $VULKAN_SDK/share/vulkan/explicit_layer.d $VK_LAYER_PATH
 
 switch (uname)
     case Darwin

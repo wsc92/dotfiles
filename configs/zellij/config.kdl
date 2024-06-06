@@ -228,7 +228,7 @@ default_shell "fish"
 //   - true (default)
 //   - false
 //
-pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -275,22 +275,36 @@ pane_frames true
 //     white "#c6d0f5"
 //   }
 // }
+//themes {
+//    cogent {
+//        bg "#2A0F31"
+//        fg "#C2B8C5"
+//        red "#AE445A"
+//        green "#5AAEF3"
+//        yellow "#F39F5A"
+//        blue "#5AAEF3"
+//        magenta "#445AAE"
+//        orange "#AE6344"
+//        cyan "#44A398"
+//        black "#341C3E"
+//        white "#DAD5DC"
+//    }
+//}
 themes {
     cogent {
-        bg "#2A0F31"
-        fg "#C2B8C5"
-        red "#AE445A"
-        green "#5AAEF3"
-        yellow "#F39F5A"
-        blue "#5AAEF3"
-        magenta "#445AAE"
-        orange "#AE6344"
-        cyan "#44A398"
-        black "#341C3E"
-        white "#DAD5DC"
+        bg "#1d2021"
+        fg "#d4be98"
+        red "#ea6962"
+        green "#a9b665"
+        yellow "#d8a657"
+        blue "#7daea3"
+        magenta "#d3869b"
+        orange "#89b483"
+        cyan "#f3d5cf"
+        black "#32302f"
+        white "#d4be98"
     }
 }
-
 // Choose the theme that is specified in the themes section.
 // Default: default
 //

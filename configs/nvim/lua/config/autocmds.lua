@@ -3,10 +3,11 @@
 -- Add any additional autocmds here
 -- Sets colors to line numbers Above, Current and Below in this orders
 function LineNumberColors()
-  vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#C6D0F8", bold = true })
+  vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#d4be98", bold = true })
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#E78284", bold = true })
   vim.api.nvim_set_hl(0, "LineNr", { fg = "#E78284", bold = true })
-  vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#C6D0F8", bold = true })
+  vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#d4be98", bold = true })
+  vim.api.nvim_set_hl(0, "Comment", { fg = "#aaffee", bold = true })
 end
 
 LineNumberColors()

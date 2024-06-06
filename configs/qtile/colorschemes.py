@@ -35,3 +35,22 @@ cogentN = {
         'active'     : '#F6AA5F',
         'inactive'   : '#B9415A',
 }
+cogentG = {
+        'bg'         : '#1d2021',
+        'bga'        : '#4a4c4d',
+        'fg'         : '#d4be98',
+        'black'      : '#32302f',
+        'red'        : '#ea6962',
+        'green'      : '#a9b665',
+        'yellow'     : '#d8a657',
+        'blue'       : '#7daea3',
+        'magenta'    : '#d3869b',
+        'cyan'       : '#89b483',
+        'white'      : '#d4be98',
+        'gray'       : '#4c4c4c',
+        'orange'     : '#F6AA5f',
+        'rose'       : '#f3d5cf',
+        'active'     : '#d4be98',
+        'inactive'   : '#d3869b',
+}
+

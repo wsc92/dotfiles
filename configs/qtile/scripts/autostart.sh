@@ -19,3 +19,4 @@ fi
 redshift -c ~/.config/redshift/redshift.conf &
 flameshot &
 morgen &
+steam &

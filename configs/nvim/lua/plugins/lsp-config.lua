@@ -10,8 +10,6 @@ return {
         "pyright",
         "debugpy",
         "ruff",
-        "cmake-language-server",
-        "cmakelint",
         "clang-format",
       },
     },

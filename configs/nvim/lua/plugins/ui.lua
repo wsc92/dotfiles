@@ -39,7 +39,7 @@ return {
       event = "VeryLazy",
       opts = {
         options = {
-          theme = "palenight",
+          theme = "gruvbox_dark",
           component_separators = "|",
           -- section_separators = { left = "", right = "" },
           -- section_separators = { left = "", right = "" },
