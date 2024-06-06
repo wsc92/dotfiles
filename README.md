@@ -1,7 +1,9 @@
 # An Arch Linux Qtile Configuration w/ installer
 # (USE X11 not WAYLAND)
-![Alt text](clean.png "clean")
-![Alt text](app.png "app")
+![Alt text](images/clean.png "clean")
+![Alt text](images/app.png "app")
+![Alt text](images/music.png "music")
+![Alt text](images/dev.png "dev")
 ### The installer is stable, but it requires MONONOKI NERD FONT so pick that option as the initial Nerd Font in the installer 
 + It is still a WIP so *ONLY* install if you know what you are doing in Arch and Qtile
 + Always browse the source in the scripts before installing blindly!! 😄
