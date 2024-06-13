@@ -82,7 +82,7 @@ configuration {
 window {
     background-color: @xbg;
     border: 4px;
-    border-color: @x2;
+    border-color: @x9;
     border-radius: 12px;
     padding: 40;
     width: 75%;
@@ -90,7 +90,7 @@ window {
 }
 mainbox {
     border: 2px;
-    border-color: @x2;
+    border-color: @x9;
     border-radius: 12px;
     padding: 6;
 }
@@ -105,7 +105,7 @@ textbox {
 listview {
     fixed-height: 0;
     border: 0px;
-    border-color: @x0;
+    border-color: @x9;
     spacing: 2px;
     scrollbar: false;
     padding: 2px 0px 0px;
@@ -167,14 +167,14 @@ button {
     margin: 5px;
     padding: 5px;
     background-color: @xbg;
-    text-color: @x1;
+    text-color: @xfg;
     border: 2px;
     border-radius: 20px;
     border-color: @x2;
 }
 button selected {
     background-color: @xbg;
-    text-color:       @x1;
+    text-color:       @xfg;
     border:       3px;
     border-radius: 20px;
     border-color:     @x1;
