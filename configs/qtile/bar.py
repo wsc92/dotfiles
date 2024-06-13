@@ -87,7 +87,7 @@ def init_widgets_list():
                 highlight_method='block',
                 highlight=cogentG['active'],
                 block_border=cogentG['active'],
-                block_highlight_text_color=cogentG['inactive'],
+                block_highlight_text_color=cogentG['red'],
                 foreground=cogentG['active'],
                 rounded=True,
                 this_current_screen_border=cogentG['active'],
@@ -190,7 +190,7 @@ def init_widgets_list():
             ),
             widget.OpenWeather(
                 **decor_left2,
-                api_key="", # enter API Key
+                api_key="c0916b9e5651102140d56565e529d146", # enter API Key
                 cityid="4612862", # enter city
                 metric= False,
                 format = '{location_city}: {main_temp}°{units_temperature} {icon}',

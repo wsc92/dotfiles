@@ -32,48 +32,65 @@ return {
         mode = "tabs",
       },
     },
-
-    --StatusLine
-    {
-      "nvim-lualine/lualine.nvim",
-      event = "VeryLazy",
-      opts = {
-        options = {
-          theme = "gruvbox_dark",
-          component_separators = "|",
-          -- section_separators = { left = "", right = "" },
-          -- section_separators = { left = "", right = "" },
-          -- section_separators = "",
+  },
+  --StatusLine
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    event = "VeryLazy",
+    opts = {
+      options = {
+        theme = "horizon",
+        -- component_separators = "󱤩",
+        -- section_separators = { left = "", right = "" },
+        -- section_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
+        disabled_filetypes = {
+          statusline = {},
+          winbar = {},
+        },
+        ignore_focus = {},
+        always_divide_middle = true,
+        globalstatus = false,
+        refresh = {
+          statusline = 1000,
+          tabline = 1000,
+          winbar = 1000,
         },
       },
+      sections = {},
+      tabline = {},
+      winbar = {},
+      inactive_winbar = {},
+      extensions = {},
     },
+  },
 
-    -- Filename
-    {
-      "b0o/incline.nvim",
-      event = "BufReadPre",
-      priority = 1200,
-      config = function()
-        require("incline").setup({
-          highlight = {
-            groups = {},
-          },
-          window = { margin = { vertical = 0, horizontal = 1 } },
-          hide = {
-            cursorline = true,
-          },
-          render = function(props)
-            local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
-            if vim.bo[props.buf].modified then
-              filename = "[+]" .. filename
-            end
+  -- Filename
+  {
+    "b0o/incline.nvim",
+    event = "BufReadPre",
+    priority = 1200,
+    config = function()
+      require("incline").setup({
+        highlight = {
+          groups = {},
+        },
+        window = { margin = { vertical = 0, horizontal = 1 } },
+        hide = {
+          cursorline = true,
+        },
+        render = function(props)
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          if vim.bo[props.buf].modified then
+            filename = "[+]" .. filename
+          end
 
-            local icon, color = require("nvim-web-devicons").get_icon_color(filename)
+          local icon, color = require("nvim-web-devicons").get_icon_color(filename)
 
-            return { { icon, guifg = color }, { " " }, { filename } }
-          end,
-        })
-      end,
-    },
+          return { { icon, guifg = color }, { " " }, { filename } }
+        end,
+      })
+    end,
   },
 }

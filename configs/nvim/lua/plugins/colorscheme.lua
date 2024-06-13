@@ -1,5 +1,11 @@
 return {
   {
+    "savq/melange-nvim",
+  },
+  {
+    "rebelot/kanagawa.nvim",
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = true,
@@ -13,8 +19,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "kanagawa",
     },
   },
 }
--- here is a comment
+--Here is a comments
