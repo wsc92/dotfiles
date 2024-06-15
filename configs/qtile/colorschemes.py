@@ -36,8 +36,8 @@ cogentN = {
         'inactive'   : '#B9415A',
 }
 cogentG = {
-        'bg'         : '#1d2021',
-        'bga'        : '#4a4c4d',
+        'bg'         : '#292c3c',
+        'bga'        : '#3e414f',
         'fg'         : '#d4be98',
         'black'      : '#32302f',
         'red'        : '#ea6962',

@@ -7,7 +7,7 @@ function LineNumberColors()
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ea6962", bold = true })
   vim.api.nvim_set_hl(0, "LineNr", { fg = "#ea6962", bold = true })
   vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#d4be98", bold = true })
-  vim.api.nvim_set_hl(0, "Comment", { fg = "#C2B8C5", bold = true })
+  vim.api.nvim_set_hl(0, "Comment", { fg = "#8497a8", bold = true })
 end
 
 LineNumberColors()
