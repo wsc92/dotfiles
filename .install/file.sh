@@ -79,13 +79,13 @@ else
 	cp -r ~/dotfiles/configs/rofi ~/.config
 fi
 
-if test -d ~/.config/zellij; then
+if test -d ~/.config/tmux; then
 	echo "zellij exists... replacing!"
-	rm -r ~/.config/zellij
-	cp -r ~/dotfiles/configs/zellij ~/.config
+	rm -r ~/.config/tmux
+	cp -r ~/dotfiles/configs/tmux ~/.config
 else
 	echo "zellij does not exist... creating"
-	cp -r ~/dotfiles/configs/zellij ~/.config
+	cp -r ~/dotfiles/configs/tmux ~/.config
 fi
 
 if test -e ~/.config/starship.toml; then
