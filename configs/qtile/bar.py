@@ -1,4 +1,5 @@
 import os
+import dateutil
 from libqtile import bar, widget, qtile
 from qtile_extras import widget
 from qtile_extras.widget.decorations import RectDecoration
@@ -219,14 +220,14 @@ def init_widgets_list():
                 format="%m/%d/%Y",
                 background=cogentG['bg'],
                 foreground=cogentG['blue'],
-                fontsize=14,
+                fontsize=18,
                 font="Mononoki Nerd Font",
                 padding=1,
                 mouse_callbacks={"Button1": lazy.spawn("morgen")}
             ),
             widget.Clock(
                 **decor_right,
-                format="%I:%M %p",
+                format="%H:%M",
                 background=cogentG['bg'],
                 foreground=cogentG['white'],
                 font="Mononoki Nerd Font",
