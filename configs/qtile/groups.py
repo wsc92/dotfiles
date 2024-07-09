@@ -4,7 +4,7 @@ from libqtile.config import Group
 groups = []
 
 # FOR QWERTY KEYBOARDS
-group_names = ["1", "2", "3", "4", "5", "6"]
+group_names = ["1", "2", "3", "4", "5", "6", "7", "8"]
 
 # FOR AZERTY KEYBOARDS
 #group_names = ["ampersand", "eacute", "quotedbl", "apostrophe", "parenleft", "section", "egrave", "exclam", "ccedilla", "agrave",]
@@ -13,7 +13,7 @@ group_names = ["1", "2", "3", "4", "5", "6"]
 # group_labels = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", ]
 # group_labels = ["", "", "", "", "",]
 # group_labels = ["Web", "Edit/chat", "Image", "Gimp", "Meld", "Video", "Vb", "Files", "Mail", "Music",]
-group_labels = ["","","","",""," "]
+group_labels = ["","","","","","", "󰙯", ""]
 
 group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall",
                  "monadtall", "monadtall", "monadtall", "monadtall", "treetab", "floating", ]
@@ -25,7 +25,8 @@ for i in range(len(group_names)):
             name=group_names[i],
             layout=group_layouts[i].lower(),
             label=group_labels[i],
-        ))
+        )
+    )
 
 
 
