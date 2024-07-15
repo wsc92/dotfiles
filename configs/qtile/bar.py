@@ -106,7 +106,7 @@ def init_widgets_list():
                 framerate = 60,
                 hide = False,
                 width = 150,
-                bar_colour = cogentG['fg'],
+                bar_colour = cogentG['green'],
             ),
             widget.Spacer(
                 **decor_right2,
@@ -139,7 +139,15 @@ def init_widgets_list():
             ),
             widget.TextBox(
                 background=cogentG['bga'],
-                foreground=cogentG['yellow'],
+                foreground=cogentG['red'],
+                text= "",
+                fontsize=24,
+                padding=3,
+                mouse_callbacks={"Button1": lazy.spawn(home + "/BurpSuiteCommunity/BurpSuiteCommunity")},
+            ),
+            widget.TextBox(
+                background=cogentG['bga'],
+                foreground=cogentG['green'],
                 text=" ",
                 fontsize=18,
                 padding=3,
@@ -152,7 +160,7 @@ def init_widgets_list():
                 fontsize=24,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("zenmap")},
-            ),          
+            ),
             widget.TextBox(
                 background=cogentG['bga'],
                 foreground=cogentG['blue'],
