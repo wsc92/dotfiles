@@ -1,5 +1,6 @@
 import os
-import dateutil
+import psutil
+import math
 from libqtile import bar, widget, qtile
 from qtile_extras import widget
 from qtile_extras.widget.decorations import RectDecoration
@@ -57,62 +58,42 @@ decor_right2 = {
         ],
     }
 
-
 def init_widgets_list():
     widgets_list = [
             widget.Spacer(
                 **decor_right2,
-                length=10,
+                length=3,
                 background=cogentG['bg'],
             ),
-            widget.TextBox(
-                **decor_left2,
-                background=cogentG['bga'],
-                text='APPS',
+            widget.Clock(
+                format="%m/%d/%Y",
+                background=cogentG['bg'],
+                foreground=cogentG['blue'],
+                fontsize=18,
                 font="Mononoki Nerd Font",
-                fontsize=20,
-                foreground=cogentG['white'],
-                padding=10,
-                mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")},
-                center_aligned=True,
+                padding=1,
+                mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")}
+            ),
+            widget.Spacer(
+                length=10,
             ),
             widget.Spacer(
                 **decor_right2,
-                length=35,
+                length=1,
                 background=cogentG['bg'],
             ),
-            widget.GroupBox(
-                **decor_left2,
-                fontsize=16,
-                background=cogentG['bga'],
-                highlight_method='line',
-                highlight_color=cogentG['bga'],
-                #block_border=cogentG['bga'],
-                block_highlight_text_color=cogentG['red'],
-                foreground=cogentG['active'],
-                rounded=True,
-                this_current_screen_border=cogentG['bga'],
-                active=cogentG['active'],
-                inactive=cogentG['bg'],
-                padding=6,
-                center_aligned=True,
-            ),
-            widget.Spacer(
-                length=5,
-                background=cogentG['bg'],
-            ),
-            widget.Visualiser(
-                bars = 22,
-                framerate = 60,
-                hide = False,
-                width = 150,
-                bar_colour = cogentG['green'],
-            ),
-            widget.Spacer(
-                **decor_right2,
-                length=5,
-                background=cogentG['bg'],
-            ),
+            # widget.TextBox(
+            #     **decor_left2,
+            #     background=cogentG['bga'],
+            #     text='APPS',
+            #     font="Mononoki Nerd Font",
+            #     fontsize=20,
+            #     foreground=cogentG['white'],
+            #     padding=10,
+            #     mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")},
+            #     center_aligned=True,
+            # ),
+
             widget.TextBox(
                 background=cogentG['bga'],
                 foreground=cogentG['red'],
@@ -134,7 +115,7 @@ def init_widgets_list():
                 foreground=cogentG['orange'],
                 text=" ",
                 fontsize=20,
-                padding=5,
+                padding=7,
                 mouse_callbacks={"Button1": lazy.spawn('ghidra')},
             ),
             widget.TextBox(
@@ -182,21 +163,44 @@ def init_widgets_list():
                 length=5,
                 background=cogentG['bg'],
             ),
+            widget.Visualiser(
+                bars = 22,
+                framerate = 60,
+                hide = False,
+                width = 150,
+                bar_colour = cogentG['green'],
+            ),
+            widget.Spacer(
+                **decor_right2,
+                length=4,
+                background=cogentG['bg'],
+            ),
+            widget.GroupBox(
+                **decor_left2,
+                fontsize=16,
+                background=cogentG['bga'],
+                highlight_method='line',
+                highlight_color=cogentG['bga'],
+                #block_border=cogentG['bga'],
+                block_highlight_text_color=cogentG['red'],
+                foreground=cogentG['active'],
+                rounded=True,
+                this_current_screen_border=cogentG['bga'],
+                active=cogentG['active'],
+                inactive=cogentG['bg'],
+                padding=6,
+                center_aligned=True,
+            ),
 
             widget.WindowName(
+                **decor_right2,
                 background=cogentG['bg'],
                 padding=10,
                 font="Mononoki Nerd Font Bold",
-                fontsize=18,
+                fontsize=14,
                 foreground=cogentG['fg'],
-                max_chars=50,
-            ),
-
-            widget.Spacer(
-                **decor_right2,
-                length=5,
-                background=cogentG['bg'],
-            ),
+                max_chars=30,
+            ), 
             widget.OpenWeather(
                 **decor_left2,
                 api_key="c0916b9e5651102140d56565e529d146", # enter API Key
@@ -204,7 +208,7 @@ def init_widgets_list():
                 metric= False,
                 format = '{location_city}: {main_temp}°{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
-                fontsize=20,
+                fontsize=16,
                 foreground=cogentG['white'],
                 background=cogentG['bga'],
                 mouse_callbacks={"Button1": lazy.spawn('firefox --new-window https://weather.com')},
@@ -213,9 +217,26 @@ def init_widgets_list():
                 length=5,
                 background=cogentG['bg'],
             ),
-            widget.Systray(
+
+            widget.CPU(
+                format = '    {load_percent} %',
+                fontsize = 12,
                 background=cogentG['bg'],
+                foreground=cogentG['green']
             ),
+            widget.Memory(
+                format = '   {MemUsed: .0f}{mm}  {MemTotal: .0f}{mm}',
+                fontsize = 12,
+                background=cogentG['bg'],
+                foreground=cogentG['red']
+            ),
+
+            widget.NetGraph(
+                border_color=cogentG['bg'],
+                fill_color=cogentG['red'],
+                graph_color=cogentG['blue']
+            ),
+
             widget.Sep(
                 **decor_right,
                 linewidth=5,
@@ -223,15 +244,13 @@ def init_widgets_list():
                 foreground=cogentG['bga'],
                 size_percent=75,
             ),
-            widget.Clock(
-                **decor_right,
-                format="%m/%d/%Y",
+            widget.Systray(
                 background=cogentG['bg'],
-                foreground=cogentG['blue'],
-                fontsize=18,
-                font="Mononoki Nerd Font",
-                padding=1,
-                mouse_callbacks={"Button1": lazy.spawn("morgen")}
+            ),
+            widget.Spacer(
+                **decor_right,
+                background=cogentG['bg'],
+                length=5
             ),
             widget.Clock(
                 **decor_right,
@@ -239,10 +258,9 @@ def init_widgets_list():
                 background=cogentG['bg'],
                 foreground=cogentG['white'],
                 font="Mononoki Nerd Font",
-                fontsize=18,
+                fontsize=20,
                 padding=1,
             ),
-
             widget.TextBox(
                 **decor_right,
                 backround=cogentG['bg'],
