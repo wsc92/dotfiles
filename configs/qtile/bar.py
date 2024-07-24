@@ -165,7 +165,7 @@ def init_widgets_list():
                 mouse_callbacks={"Button1": lazy.spawn('nitrogen')},
             ),
             widget.Spacer(
-                length=5,
+                length=4,
                 background=cogentG['bg'],
             ),
             widget.Visualiser(
@@ -193,7 +193,7 @@ def init_widgets_list():
                 this_current_screen_border=cogentG['bga'],
                 active=cogentG['active'],
                 inactive=cogentG['bg'],
-                padding=6,
+                padding=5,
                 center_aligned=True,
             ),
             widget.Spacer(
@@ -204,7 +204,7 @@ def init_widgets_list():
                 background=cogentG['bg'],
                 padding=5,
                 font="Mononoki Nerd Font Bold",
-                fontsize=16,
+                fontsize=15,
                 foreground=cogentG['fg'],
                 max_chars=18,
                 scroll = True,
@@ -222,7 +222,7 @@ def init_widgets_list():
                 metric= False,
                 format = '{location_city}: {main_temp}°{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
-                fontsize=18,
+                fontsize=16,
                 foreground=cogentG['white'],
                 background=cogentG['bga'],
                 mouse_callbacks={"Button1": lazy.spawn('firefox --new-window https://weather.com')},
