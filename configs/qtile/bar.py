@@ -62,24 +62,30 @@ def init_widgets_list():
     widgets_list = [
             widget.Spacer(
                 **decor_right2,
-                length=3,
+                length=1,
                 background=cogentG['bg'],
             ),
             widget.Clock(
                 format="%m/%d/%Y",
                 background=cogentG['bg'],
                 foreground=cogentG['blue'],
-                fontsize=18,
+                fontsize=16,
                 font="Mononoki Nerd Font",
                 padding=1,
                 mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")}
             ),
-            widget.Spacer(
-                length=10,
-            ),
+            # widget.CheckUpdates(
+            #     distro='Arch',
+            #     background=cogentG['bg'],
+            #     colour_have_updates=cogentG['red'],
+            #     colour_no_updates=cogentG['green'],
+            #     fmt='󰱶 {updates}',
+            #     no_update_string='󰱱 ',
+            #     update_interval=60
+            # ),
             widget.Spacer(
                 **decor_right2,
-                length=1,
+                length=15,
                 background=cogentG['bg'],
             ),
             # widget.TextBox(
@@ -93,7 +99,6 @@ def init_widgets_list():
             #     mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/apps.sh")},
             #     center_aligned=True,
             # ),
-
             widget.TextBox(
                 background=cogentG['bga'],
                 foreground=cogentG['red'],
@@ -106,7 +111,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['red'],
                 text= "",
-                fontsize=23,
+                fontsize=22,
                 padding=2,
                 mouse_callbacks={"Button1": lazy.spawn(home + "/BurpSuiteCommunity/BurpSuiteCommunity")},
             ),
@@ -114,7 +119,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['orange'],
                 text=" ",
-                fontsize=20,
+                fontsize=18,
                 padding=7,
                 mouse_callbacks={"Button1": lazy.spawn('ghidra')},
             ),
@@ -122,7 +127,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['yellow'],
                 text=" ",
-                fontsize=20,
+                fontsize=18,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("ida64")},
             ),
@@ -138,7 +143,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['green'],
                 text= "󰚫",
-                fontsize=24,
+                fontsize=18,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn("zenmap")},
             ),
@@ -146,7 +151,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['blue'],
                 text=" ",
-                fontsize=20,
+                fontsize=18,
                 padding=6,
                 mouse_callbacks={"Button1": lazy.spawn('discord')},
             ),
@@ -155,7 +160,7 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['magenta'],
                 text="󰸉",
-                fontsize=20,
+                fontsize=18,
                 padding=3,
                 mouse_callbacks={"Button1": lazy.spawn('nitrogen')},
             ),
@@ -191,16 +196,25 @@ def init_widgets_list():
                 padding=6,
                 center_aligned=True,
             ),
-
+            widget.Spacer(
+                length=10
+            ),
             widget.WindowName(
                 **decor_right2,
                 background=cogentG['bg'],
-                padding=10,
+                padding=5,
                 font="Mononoki Nerd Font Bold",
-                fontsize=14,
+                fontsize=16,
                 foreground=cogentG['fg'],
-                max_chars=30,
+                max_chars=18,
+                scroll = True,
+                scroll_hide = False,
+                scroll_interval = 0.1,
+                scroll_repeat = True,
+                scroll_step = 1,
+                scroll_delay = 1
             ), 
+
             widget.OpenWeather(
                 **decor_left2,
                 api_key="c0916b9e5651102140d56565e529d146", # enter API Key
@@ -208,29 +222,34 @@ def init_widgets_list():
                 metric= False,
                 format = '{location_city}: {main_temp}°{units_temperature} {icon}',
                 font="Mononoki Nerd Font",
-                fontsize=16,
+                fontsize=18,
                 foreground=cogentG['white'],
                 background=cogentG['bga'],
                 mouse_callbacks={"Button1": lazy.spawn('firefox --new-window https://weather.com')},
             ),
             widget.Spacer(
-                length=5,
-                background=cogentG['bg'],
+                    length=10,
+                    background=cogentG['bg'],
             ),
-
             widget.CPU(
                 format = '    {load_percent} %',
-                fontsize = 12,
+                fontsize = 14,
                 background=cogentG['bg'],
                 foreground=cogentG['green']
             ),
+            widget.Spacer(length=5),
             widget.Memory(
-                format = '   {MemUsed: .0f}{mm}  {MemTotal: .0f}{mm}',
-                fontsize = 12,
+                format = '   {MemUsed: .0f} {mm}  {MemTotal: .0f} {mm}',
+                fontsize = 14,
                 background=cogentG['bg'],
                 foreground=cogentG['red']
             ),
-
+            widget.Sep(
+                linewidth=5,
+                background=cogentG['bg'],
+                foreground=cogentG['bga'],
+                size_percent=100,
+            ),
             widget.NetGraph(
                 border_color=cogentG['bg'],
                 fill_color=cogentG['red'],
@@ -238,36 +257,36 @@ def init_widgets_list():
             ),
 
             widget.Sep(
-                **decor_right,
                 linewidth=5,
                 background=cogentG['bg'],
                 foreground=cogentG['bga'],
-                size_percent=75,
+                size_percent=100,
             ),
             widget.Systray(
                 background=cogentG['bg'],
             ),
-            widget.Spacer(
-                **decor_right,
+            widget.Spacer(length=5),
+            widget.Sep(
+                linewidth=5,
                 background=cogentG['bg'],
-                length=5
+                foreground=cogentG['bga'],
+                size_percent=100,
             ),
             widget.Clock(
-                **decor_right,
                 format="%H:%M",
                 background=cogentG['bg'],
                 foreground=cogentG['white'],
                 font="Mononoki Nerd Font",
-                fontsize=20,
-                padding=1,
+                fontsize=16,
+                padding=8,
             ),
             widget.TextBox(
-                **decor_right,
+                **decor_right2,
                 backround=cogentG['bg'],
                 foreground=cogentG['red'],
                 padding=2,
                 text="⏻",
-                fontsize=20,
+                fontsize=18,
                 mouse_callbacks={"Button1": lazy.spawn(home + "/.config/qtile/scripts/powermenu.sh")},
             ),
     ]
@@ -285,9 +304,9 @@ def init_widgets_screen2():
     return widgets_screen2
 
 
-main_bar = bar.Bar(widgets=init_widgets_screen1(), size=45,
+main_bar = bar.Bar(widgets=init_widgets_screen1(), size=40,
                    opacity=0.80, margin=2, background=cogentG['bg'])
 
-main_bar2 = bar.Bar(widgets=init_widgets_screen2(), size=45,
+main_bar2 = bar.Bar(widgets=init_widgets_screen2(), size=40,
                    opacity=0.80, margin=2, background=cogentG['bg'])
 
