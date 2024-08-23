@@ -143,8 +143,8 @@ def init_widgets_list():
                 background=cogentG['bga'],
                 foreground=cogentG['magenta'],
                 text= "󰚫",
-                fontsize=18,
-                padding=3,
+                fontsize=22,
+                padding=5,
                 mouse_callbacks={"Button1": lazy.spawn("zenmap")},
             ),
             widget.TextBox(
