@@ -5,6 +5,6 @@ sudo pacman -S base-devel sddm alacritty kitty unzip nmap alsa-utils zoxide qtil
     pasystray cmus gedit steam cloc obsidian zathura nerd-fonts -y
 sleep 4
 
-yay -S archlinux-tweak-tool-git wget morgen burpsuite ida-free zenmap sddm-sugar-dark qtile-extras-git
-yay -S drawio-desktop
+yay -S archlinux-tweak-tool-git wget morgen burpsuite ida-free zenmap sddm-sugar-dark qtile-extras-git -y
+yay -S drawio-desktop -y
 sleep 4
