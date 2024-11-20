@@ -8,7 +8,7 @@ from groups import groups
 
 mod = "mod4"
 terminal = "alacritty"
-fm = "nemo"
+fm = "dolphin"
 browser = "firefox"
 menu = "rofi -show drun -show-icons"
 editor = "~/.config/qtile/scripts/editor.sh"
