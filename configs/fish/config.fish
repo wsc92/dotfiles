@@ -47,6 +47,13 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
+#CUDA
+# Set CUDA environment paths
+set -x PATH /opt/cuda/bin $PATH
+set -x LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
+set -x CPATH /opt/cuda/include $CPATH
+set -x LIBRARY_PATH /opt/cuda/lib64 $LIBRARY_PATH
+
 # TODO:: Vulkan
 set -gx VULKAN_SDK $HOME/vulkan/1.3.283.0/x86_64
 set -gx PATH $VULKAN_SDK/bin $PATH
