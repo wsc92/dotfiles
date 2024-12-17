@@ -1,14 +1,14 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto,'Font Awesome 5', 'SFNS Display',  Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-family: 'Mononoki Nerd Font 7';
+    font-size: 16px;
     min-height: 0;
 }
 
 window#waybar {
     background: rgba(0,0,0,0);
-    color: #ffffff;
+    color: #CDD6F4;
 }
 
 window#waybar.hidden {
@@ -25,7 +25,7 @@ window#waybar.hidden {
     margin: 0 5px;
     padding: 0;
     background: transparent;
-    color: #ffffff;
+    color: #CDD6F4;
     border-bottom: 2px solid transparent;
 }
 
@@ -55,7 +55,7 @@ window#waybar.hidden {
     padding: 0 20px;
     margin: 0 10px;
     background-color: #282a36;
-    color: #ffffff;
+    color: #CDD6F4;
     border-radius: 20px;
 }
 
@@ -71,7 +71,7 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
+        background-color: #CDD6F4;
         color: #000000;
     }
 }
