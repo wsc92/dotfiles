@@ -50,12 +50,12 @@
 + Package Managers
     + pacman
     + yay
-    + snap
 + Shells
     + Fish
     + Bash
 + Terminals
-    + alacritty (zellij as terminal multiplexer)
+    + alacritty (fish)
+    + tmux
     + Kitty (simple bash)
     + starship for prompts
 + Editor
@@ -64,20 +64,16 @@
     + Gedit (simple GUI)
 + Programs
     + Morgen (calendar)
-    + Nemo (file manager)
-    + draw.io (for design mapping)
+    + Thunar (file manager)
     + Obsidian (Notetaker)
     + Ghidra (disassembler)
-    + Zenmap (port scanner)
     + wireshark  (Network monitor)
     + BurpSuite
     + discord
     + GIMP
     + Blender
     + Arch-linux-tweak tool for easier GTK theming
-    + Nitrogen (GUI wallpaper)
-    + feh (cli wallpaper)
-    + cava
+    + Hyprpaper (wallpaper)
     + npm
     + gem
     + Node
@@ -89,16 +85,12 @@
 ### super key by default is the windows key
 + super + q = quit
 + super + w = change wallpaper (add more to wallpapers in home)
-+ super + e = File Manager (Nemo)
++ super + e = File Manager (Thunar)
 + super + r = rofi drun
 + super + ENTER = launch Alacritty (fish shell)
 + super + k = Launch Kitty (bash shell)
-+ super + i = Toggle Floating window
 + super + b = Launch Firefox
-+ super + c = Launch Firefox (chatGPT)
 + super + n = Launch Obsidian
-+ super + g = Screen Grab tool (Flameshot)
-+ super + TAB = all apps that are open menu and workstation number
 + super + [1-6] = change workspace
 + super + shift + [1-6] = move application to that workspace
 
