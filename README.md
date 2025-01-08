@@ -1,14 +1,10 @@
-# An Arch Linux Qtile Configuration w/ installer
-# (USE X11 not WAYLAND)
-![Alt text](images/clean.png "clean")
-![Alt text](images/app.png "app")
-![Alt text](images/music.png "music")
-![Alt text](images/dev.png "dev")
-### The installer is stable, but it requires MONONOKI NERD FONT so pick that option as the initial Nerd Font in the installer 
+# An Arch Linux Hyprland Configuration w/ installer
+
+### This is all deprecated, and does not work im working on fixing it.
 + It is still a WIP so *ONLY* install if you know what you are doing in Arch and Qtile
 + Always browse the source in the scripts before installing blindly!! 😄
 
-### Installation (X11 Not Wayland)
+### Installation
 + Clean minimal install of Arch based on your pc specs
     + required packages in the arch install
         + multilib repo if using Nvidia GPU
