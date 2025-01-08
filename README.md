@@ -1,7 +1,7 @@
 # An Arch Linux Hyprland Configuration w/ installer
 
 ### This is all deprecated, and does not work im working on fixing it.
-+ It is still a WIP so *ONLY* install if you know what you are doing in Arch and Qtile
++ It is still a WIP so *ONLY* install if you know what you are doing in Arch and hyprland
 + Always browse the source in the scripts before installing blindly!! 😄
 
 ### Installation
@@ -85,7 +85,7 @@
 
 ## Key Commands 
 + working on the full list will have it built into system soon
-    + in the meantime look for keys.py in the .config/qtile folder
+    + in the meantime look for config file in the .config/hypr folder
 ### super key by default is the windows key
 + super + q = quit
 + super + w = change wallpaper (add more to wallpapers in home)
