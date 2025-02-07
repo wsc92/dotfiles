@@ -1,62 +1,45 @@
 #!/bin/bash
-# Setup wallaper directory and monitor names.
-dir="/home/cogent/wallpapers/"
-monitor1="HDMI-A-1"
 
-cd $dir
+# Configuration
+WALLPAPER_DIR="/home/cogent/wallpapers/"
+MONITOR_PRIMARY="eDP-1"
+MONITOR_SECONDARY="HDMI-A-1"
 
-# Get a list of the .png files in the directory.
-papers=("${dir}"*.jpg)
+# Get wallpapers
+wallpapers=("${WALLPAPER_DIR}"*.jpg)
+wallpaper_count=${#wallpapers[@]}
 
-cd /home/cogent/.config/hypr/
-
-# Get the length of the list of files.
-length=${#papers[@]}
-
-# Get the first random index.
-first=$((1 + $RANDOM % $length - 1))
-
-function dif_random {
-    second=$((1 + $RANDOM % $length - 1))
-
-    # Check to see if the second random index is equal
-    # to the first, if so, find a new one.
-    if [ $1 -eq $second ]; then
-        dif_random "$1"
-    else
-        return $second
-    fi
-}
-
-# Make sure that there is more than one file.
-# This avoids an infite loop.
-if [ $length -gt 1 ]; then
-    dif_random "$first"
-    second=$?
-else
-    second=$first
+if [ $wallpaper_count -eq 0 ]; then
+    echo "No wallpapers found in $WALLPAPER_DIR"
+    exit 1
 fi
 
-# Use the random indexes to get the two filenames
-paper_one=${papers[$first]}
-paper_two=${papers[$second]}
+# Get random indices
+first=$((RANDOM % wallpaper_count))
+second=$first
 
-# Check to see if hyprpaper is running
-if pgrep -x "hyprpaper" >/dev/null; then
-    # If hyprpaper is running, select two new preloaded wallpapers
-    hyprctl hyprpaper wallpaper "${monitor1},${paper_one}"
-else
-    # Remove the old conf file.
-    rm -f hyprpaper.conf
-
-    # If it's not running, generate a new hyprpaper.conf
-    for p in "${papers[@]}"; do
-        echo "preload = ${p}" >>hyprpaper.conf
+if [ $wallpaper_count -gt 1 ]; then
+    while [ $first -eq $second ]; do
+        second=$((RANDOM % wallpaper_count))
     done
+fi
 
-    echo "wallpaper = ${monitor1},${paper_one}" >>hyprpaper.conf
+wallpaper_primary="${wallpapers[$first]}"
+wallpaper_secondary="${wallpapers[$second]}"
 
-    # Start hyprpaper
+# If hyprpaper is running, just change wallpapers
+if pgrep -x "hyprpaper" >/dev/null; then
+    hyprctl hyprpaper wallpaper "$MONITOR_PRIMARY,$wallpaper_primary"
+    hyprctl hyprpaper wallpaper "$MONITOR_SECONDARY,$wallpaper_secondary"
+else
+    # First time setup - generate config and start hyprpaper
+    {
+        for wallpaper in "${wallpapers[@]}"; do
+            echo "preload = $wallpaper"
+        done
+        echo "wallpaper = $MONITOR_PRIMARY,$wallpaper_primary"
+        echo "wallpaper = $MONITOR_SECONDARY,$wallpaper_secondary"
+    } >"/home/cogent/.config/hypr/hyprpaper.conf"
+
     hyprpaper &
-    disown
 fi

@@ -30,6 +30,9 @@ alias chronos /home/cogent/dev/chronos/bin/testbed
 
 command -qv nvim && alias vim nvim && alias v nvim
 
+#API KEYS
+set -gx FINNHUB_API_KEY cu40e31r01qp6s4jjba0cu40e31r01qp6s4jjbag
+
 # NVim
 set -gx EDITOR nvim
 
@@ -54,11 +57,6 @@ set -x LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
 set -x CPATH /opt/cuda/include $CPATH
 set -x LIBRARY_PATH /opt/cuda/lib64 $LIBRARY_PATH
 
-# TODO:: Vulkan
-set -gx VULKAN_SDK $HOME/vulkan/1.3.283.0/x86_64
-set -gx PATH $VULKAN_SDK/bin $PATH
-set -gx LD_LIBRARY_PATH $VULKAN_SDK/lib $LD_LIBRARY_PATH
-set -gx VK_LAYER_PATH $VULKAN_SDK/share/vulkan/explicit_layer.d $VK_LAYER_PATH
 
 switch (uname)
     case Darwin
