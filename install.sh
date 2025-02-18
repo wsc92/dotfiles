@@ -16,6 +16,7 @@ PACKAGES=(
     waybar
     wofi
     dunst
+    udiskie
 )
 
 # Function to check if command succeeded
