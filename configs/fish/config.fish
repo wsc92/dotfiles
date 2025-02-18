@@ -32,6 +32,7 @@ command -qv nvim && alias vim nvim && alias v nvim
 
 #API KEYS
 set -gx FINNHUB_API_KEY cu40e31r01qp6s4jjba0cu40e31r01qp6s4jjbag
+set -gx POLYGON_API_KEY haE51l8zypyVZuKf3xFRH4u_xRqXYzBM
 
 # NVim
 set -gx EDITOR nvim

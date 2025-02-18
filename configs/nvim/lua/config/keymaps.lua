@@ -91,7 +91,6 @@ keymap.set("n", "<leader>h9", function()
   require("harpoon.ui").nav_file(9)
 end)
 
-
 --Dap test_class/test_method
 keymap.set("n", "<leader>tc", function()
   if vim.bo.filetype == "python" then
@@ -116,3 +115,18 @@ end)
 keymap.set("n", "<leader>i", function()
   require("cogent.lsp").toggleInlayHints()
 end)
+
+-- Open compiler
+vim.api.nvim_set_keymap("n", "<F6>", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+-- Redo last selected option
+vim.api.nvim_set_keymap(
+  "n",
+  "<S-F6>",
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+    .. "<cmd>CompilerRedo<cr>",
+  { noremap = true, silent = true }
+)
+
+-- Toggle compiler results
+vim.api.nvim_set_keymap("n", "<S-F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
