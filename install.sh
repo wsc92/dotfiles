@@ -17,6 +17,16 @@ PACKAGES=(
     wofi
     dunst
     udiskie
+    flameshot
+    cbatticon
+    blueman
+    python
+    fzf
+    npm
+    ripgrep
+    noto-fonts-emoji
+    less
+    man
 )
 
 # Function to check if command succeeded
