@@ -1,40 +1,40 @@
-window {
-	margin: 0px;
-	border: 1px solid #bd93f9;
-	background-color: #282a36;
+* {
+  font-family: JetBrainsMono;
+  color: #e5e9f0;
+  background: transparent;
+}
+
+#window {
+  background: #1d2021;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 5px solid #33ccff;
 }
 
 #input {
-	margin: 5px;
-	border: none;
-	color: #f8f8f2;
-	background-color: #44475a;
-}
-
-#inner-box {
-	margin: 5px;
-	border: none;
-	background-color: #282a36;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
 }
 
 #outer-box {
-	margin: 5px;
-	border: none;
-	background-color: #282a36;
+  padding: 20px;
 }
 
-#scroll {
-	margin: 0px;
-	border: none;
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#entry:selected {
+  background-color: #2e3440;
 }
 
 #text {
-	margin: 5px;
-	border: none;
-	color: #f8f8f2;
-} 
-
-#entry:selected {
-	background-color: #44475a;
+  margin: 2px;
 }
-
