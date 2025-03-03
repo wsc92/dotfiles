@@ -58,6 +58,18 @@ set -x LD_LIBRARY_PATH /opt/cuda/lib64 $LD_LIBRARY_PATH
 set -x CPATH /opt/cuda/include $CPATH
 set -x LIBRARY_PATH /opt/cuda/lib64 $LIBRARY_PATH
 
+#Vulkan
+# Set VULKAN_SDK base path
+set -x VULKAN_SDK ~/vulkan/1.4.304.1/x86_64
+
+# Add Vulkan SDK bin directory to PATH
+set -x PATH $VULKAN_SDK/bin $PATH
+
+# Add Vulkan SDK lib directory to LD_LIBRARY_PATH
+set -x LD_LIBRARY_PATH $VULKAN_SDK/lib $LD_LIBRARY_PATH
+
+# Set VK_LAYER_PATH for Vulkan layers
+set -x VK_LAYER_PATH $VULKAN_SDK/share/vulkan/explicit_layer.d
 
 switch (uname)
     case Darwin
