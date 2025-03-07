@@ -1,13 +1,11 @@
-# Wofi configuration
 show=drun
-columns=1
-lines=10
-width=600
+width=750
 height=400
-location=center
+always_parse_args=true
+show_all=false
+term=alacritty
 hide_scroll=true
-allow_images=true
-prompt=Run:
+print_command=true
 insensitive=true
-allow_markup=true
-
+prompt=
+columns=2

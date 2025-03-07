@@ -1,26 +1,30 @@
 return {
   {
-    "savq/melange-nvim",
-  },
-  {
-    "rebelot/kanagawa.nvim",
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = true,
     opts = {
-      overrides = {
-        ["lsp.type.method"] = { fg = "#ff9900" },
-        ["@comment.lua"] = { fg = "#4a4c4d" },
+      flavour = "mocha", -- Choose from latte, frappe, macchiato, mocha
+      integrations = {
+        treesitter = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "underline" },
+            warnings = { "undercurl" },
+            information = { "underline" },
+          },
+        },
       },
     },
   },
+  -- Configure LazyVim to load Catppuccin
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "catppuccin",
     },
   },
 }
---Here is a comments
