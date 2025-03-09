@@ -13,14 +13,29 @@ PACKAGES=(
     kitty
     redshift
     lxqt-policykit
+    fd
+    luarocks
+    unzip
+    npm
+    imagemagick
+    ghostscript
+    tectonic
+    ghostscript
+    tectonic
+    viu
+    chafa
+    ueberzug
     waybar
     wofi
     dunst
     udiskie
     flameshot
+    fish
+    starship
     cbatticon
     blueman
     python
+    zoxide
     fzf
     npm
     ripgrep
