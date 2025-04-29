@@ -1,30 +1,14 @@
 return {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = true,
-    opts = {
-      flavour = "mocha", -- Choose from latte, frappe, macchiato, mocha
-      integrations = {
-        treesitter = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "underline" },
-            warnings = { "undercurl" },
-            information = { "underline" },
-          },
-        },
-      },
-    },
-  },
-  -- Configure LazyVim to load Catppuccin
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false, -- load immediately
+		priority = 1000, -- ensure it loads before other UI plugins
+		opts = {
+			transparent = true,
+		},
+		config = function()
+			vim.cmd.colorscheme("solarized-osaka")
+		end,
+	},
 }
+
