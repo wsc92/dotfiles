@@ -1,0 +1,16 @@
+live_config_reload = true
+
+import = ["~/.config/alacritty/themes/gruvbox_material_hard_dark.toml"]
+# color.draw_bold_text_with_bright_colors = true
+
+[shell]
+args = ["-l", "-c", "tmux a -t cogent || tmux new -s cogent"]
+program = "/usr/bin/fish"
+
+[window]
+opacity = 0.5
+blur = true
+
+[font]
+normal = { family = "Mononoki Nerd Font", style = "Regular" }
+size = 12

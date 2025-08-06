@@ -1,0 +1,159 @@
+# Starship Config File
+# @CogentMusik
+#
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+
+format = """
+$username\
+$directory\
+$c\
+$docker_context\
+$elixir\
+$elm\
+$git_branch\
+$git_status\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+\n\
+\n$character\
+"""
+right_format = """
+$cmd_duration\
+$time\
+$hostname\
+"""
+
+
+[username]
+#style_user = "#F6AA5F"
+#style_root = "#B9415A"
+style_user = "#d8a657"
+style_root = "#ea6962"
+format = "  [$user]($style) "
+disabled = false
+show_always = true
+
+# Set up Host
+[hostname]
+ssh_only = false
+#format = '󰇅 [arch-cogent](#F6AA5F)'
+format = '󰇅 [arch-cogent](#d8a657)'
+trim_at = "."
+disabled = false
+
+# Setup Time
+[time]
+disabled = false
+time_format = "%R"
+#format = "🕐[ $time ](#DAD5DC)"
+format = "🕐[ $time ](#d4be98)"
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+#success_symbol = '[ 󰁕](#609C48)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+#error_symbol = '[  ](#B9415A)'
+success_symbol = '[ 󰁕](#a9b665)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[  ](#ea6962)'
+
+
+# Configure Directory
+[directory]
+read_only = " 󰌾"
+truncation_length = 5
+truncate_to_repo = true
+truncation_symbol = '.../'
+#style = "bold italic #5FABF6"
+style = "bold italic #7daea3"
+home_symbol = " "
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Setup TimeOut
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = false
+style = "bold italic red"
+
+[c]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[docker_context]
+symbol = " "
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[elm]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[git_branch]
+symbol = " "
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[haskell]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[java]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[julia]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[nodejs]
+symbol = ""
+format = '[ $symbol ]($style)'
+
+[nim]
+symbol = " "
+format = '[ $symbol ]($style)'
+
+[python]
+symbol = "󱔎 "
+format = '[ $symbol ]($style)'
+
+[rust]
+symbol = ""
+format = '[ $symbol ]($style)'
+
+

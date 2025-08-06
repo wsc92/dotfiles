@@ -1,0 +1,17 @@
+[general]
+live_config_reload = true
+
+import = ["~/.config/alacritty/themes/solarized_osaka.toml"]
+# color.draw_bold_text_with_bright_colors = true
+
+[terminal]
+shell.program =  "/usr/bin/fish"
+shell.args = ["-l", "-c", "tmux a -t cogent || tmux new -s cogent"]
+
+[window]
+opacity = 0.7
+blur = false
+
+[font]
+normal = { family = "Mononoki Nerd Font", style = "Regular" }
+size = 12
